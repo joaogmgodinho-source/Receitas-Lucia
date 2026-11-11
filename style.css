@@ -51,6 +51,7 @@ body {
 span {
     color: var(--vermelho-escuro);
 }
+/* Dudu */
 footer{
 background-color: #101010;
  border-top: 3px solid var(--vermelho-escuro);
@@ -66,8 +67,19 @@ background-color: #101010;
   /* Cria um espaço de 15px entre a logo e o começo do texto */
   gap: 15px;
 }
+footer h1{
+    font-size: 25px;
+    /* barra laterral */
+    border-right: 4px solid #B91C1C;
+    padding-right: 15px;
+   
+}
+footer p{
+    font-size: 20px;
+    color:#B8B8B8;
+}
 footer img{
-     max-width: 100px;
+     max-width: 60px;
 }
 
 .footer-content {
@@ -87,7 +99,7 @@ footer img{
   width: fit-content;
 
   /* Empurra a caixa inteira para o lado direito */
-  margin-left: auto;
+  margin-left: 700px;
 
 
 }
