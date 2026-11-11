@@ -1,3 +1,27 @@
-* {
-    text-decoration: none;
+footer {
+  background-color: #121214; /* Fundo escuro */
+  display: flex;
+  padding: 20px;
+}
+
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 16px; /* Distância entre o texto "Pro" e a linha */
+  border-right: 1.5px solid #8c3b3b; /* Linha vertical vermelha escura */
+  height: 36px; /* Controla a altura da linha vertical */
+}
+
+.logo-texto {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 800; /* Extra-negrito para "Receitas" */
+  color: #ffffff;
+  letter-spacing: -0.8px; /* Deixa as letras bem unidas */
+}
+
+.logo-texto .destaque {
+  font-weight: 400; /* Peso regular para "Pro" */
+  color: #d94e4e;   /* Tom vermelho/coral */
+  margin-left: 1px; /* Pequeno respiro entre as palavras */
 }
