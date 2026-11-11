@@ -53,5 +53,41 @@ span {
 }
 footer{
 background-color: #101010;
- border-bottom: 3px solid var(--vermelho-escuro);
+ border-top: 3px solid var(--vermelho-escuro);
+ display: flex;
+ gap: 40px;
+ 
+}
+.footer-titulo {
+  /* Ativa o Flexbox, que coloca os itens lado a lado por padrão */
+  display: flex;
+  /* Alinha a logo e o texto no centro verticalmente (um na mesma altura do outro) */
+  align-items: center;
+  /* Cria um espaço de 15px entre a logo e o começo do texto */
+  gap: 15px;
+}
+footer img{
+     max-width: 100px;
+}
+
+.footer-content {
+  /* Ativa o Flexbox */
+  display: flex;
+
+  /* Coloca o texto em cima e o ícone embaixo */
+  flex-direction: column;
+
+  /* Empurra todo o conteúdo para o lado direito */
+  align-items: flex-end;
+
+  /* Espaço vertical entre o título e o ícone */
+  gap: 8px;
+
+  /* Faz a caixa ter o tamanho exato do conteúdo */
+  width: fit-content;
+
+  /* Empurra a caixa inteira para o lado direito */
+  margin-left: auto;
+
+
 }
