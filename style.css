@@ -51,3 +51,7 @@ body {
 span {
     color: var(--vermelho-escuro);
 }
+footer{
+background-color: #101010;
+ border-bottom: 3px solid var(--vermelho-escuro);
+}
