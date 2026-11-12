@@ -21,9 +21,6 @@
     <h1>Receitas do Lucia</h1>
     <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada pelos alunos de todo o ensino médio e catalogada aqui</p>
     
-
-
-   
     </div>
     <!-- Gerá a imagem da categoria -->
 <div class="Categoria">
@@ -38,12 +35,16 @@
 
 <!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
 <div class="grade-categorias">
-
   <!-- Botão 1: Salgados -->
   <button type="button" class="cartao-categoria">
     <!-- Ícone de talheres -->
-
- 
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
+  <!-- garfo -->
+<path d="M5 3v6a3 3 0 0 0 6 0V3"/>
+  <path d="M8 3v18"/>
+  <!-- Faca -->
+  <path d="M18 3v18"/>
+  <path d="M18 3a4 4 0 0 0-4 4v5a2 2 0 0 0 2 2h2"/>
     <span>Salgados</span>
   </button>
 
@@ -62,7 +63,6 @@
   <!-- Gota / Cereja inclinada no topo -->
   <path d="M13 3C14.5 5 15 6.2 15 7.2C15 8.3 14.1 9.2 13 9.2C11.9 9.2 11 8.3 11 7.2C11 6.2 11.5 5 13 3Z"/>
 </svg>
-
      <!-- Texto do botão -->
     <span>Doces</span>
   </button>
@@ -80,7 +80,6 @@
   <!-- Detalhe central abaixo da tampa -->
   <path d="M10 10a2 2 0 0 0 4 0"/>
 </svg>
-
     <!-- Texto do botão -->
     <span>Bebidas</span>
   </button>
@@ -98,12 +97,80 @@
   <!-- Base da tigela -->
   <path d="M9 20.5h6"/>
 </svg>
-
        <!-- Texto do botão -->
     <span>Caldos</span>
   </button>
-
 </div>
+
+<!-- icone e titulo das Receitas -->
+<div class="receitas">
+  <!-- Container principal do ícone vetorial de chama (100x100px com fundo transparente) -->
+<svg xmlns="http://w3.org" viewBox="0 0 100 100" width="25" height="25">
+  <!-- Traçado da chama em vermelho coral (#E5484D) com três pontas e recorte interno na base -->
+  <path fill="#E5484D" fill-rule="evenodd" d="
+    M 54 8
+    C 48 22, 57 31, 65 40
+    C 71 47, 73 54, 71 60
+    C 75 56, 76 50, 76 44
+    C 76 38, 80 33, 85 31
+    C 82 37, 83 43, 87 50
+    C 92 59, 92 72, 84 82
+    C 76 91, 64 95, 53 95
+    C 61 91, 64 83, 62 75
+    C 60 67, 54 61, 50 56
+    C 46 61, 40 67, 38 75
+    C 36 83, 39 91, 47 95
+    C 36 95, 24 91, 16 82
+    C 8 72, 8 59, 13 50
+    C 17 42, 22 36, 28 32
+    C 26 39, 28 46, 33 50
+    C 38 53, 42 50, 40 44
+    C 36 35, 34 25, 41 16
+    C 45 11, 50 9, 54 8
+    Z
+  "/>
+</svg>
+  <h2>Receitas</h2>
+</div>
+<div class="recipe-card">
+    <div class="card-image">
+      <img src="https://unsplash.com" alt="Lasanha à Bolonhesa">
+      <button class="favorite-btn" aria-label="Favoritar receita">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+    </div>
+<!-- teste -->
+    <div class="card-content">
+      <h3 class="recipe-title">Lasanha à Bolonhesa</h3>
+      
+      <div class="recipe-meta">
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          60 min
+        </span>
+
+        <span class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+          </svg>
+          6 porções
+        </span>
+      </div>
+
+      <div class="card-footer">
+        <a href="#" class="btn-recipe">
+          Ver Receita <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
 <!-- FOOTER -->
   <footer>

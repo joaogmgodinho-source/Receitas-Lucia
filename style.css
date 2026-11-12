@@ -85,7 +85,128 @@ body {
 span {
     color: var(--vermelho-escuro);
 }
-/* Dudu */
+/* Deixa o icone do fogo do lado da escrita */
+.receitas{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+/* teste */
+.recipe-card {
+  background-color: #1e1e1e;
+  width: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(20, 20, 20, 0.75);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.favorite-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.favorite-btn:hover {
+  background-color: #e63946;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.recipe-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.recipe-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #a0a0a0;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-item svg {
+  width: 15px;
+  height: 15px;
+  color: #888888;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-recipe {
+  background-color: #e63946;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-recipe:hover {
+  background-color: #d62839;
+}
+/* roodape*/
 footer{
 background-color: #101010;
  border-top: 3px solid var(--vermelho-escuro);
