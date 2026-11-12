@@ -32,7 +32,13 @@ header {
 body {
     background-color: var(--bg-principal);
 }
-
+/* deixa a escrita "Categorias" do lado do icone */
+.Categoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
 .Categoria h2 {
    /* Remove a margem padrão do h2 para alinhar perfeitamente ao centro */
     margin: 0;
