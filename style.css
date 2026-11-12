@@ -12,7 +12,7 @@
 * {
     text-decoration: none;
     color: var(--texto-principal);
-    font-family: '';
+    font-family: 'Fira Sans';
 }
 
 header img {
@@ -27,6 +27,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    padding-bottom: 10px;
 }
 
 body {
@@ -48,6 +49,23 @@ body {
     font-size: 20px;
 }
 
-span {
-    color: var(--vermelho-escuro);
+
+
+button {
+    padding: 30px;   
+    color: var(--texto-principal);
+    background-color: var(--bg-cards);
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center; /* Centraliza os botões na horizontal */
+    align-items: center;     /* Alinha os botões na vertical */
+    gap: 15px;               /* Dá um espaçamento entre cada botão */
+    width: 100%;             /* Garante que a div ocupe a largura toda da tela */
 }
