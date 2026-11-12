@@ -33,6 +33,34 @@ body {
     background-color: var(--bg-principal);
 }
 
+.Categoria h2 {
+   /* Remove a margem padrão do h2 para alinhar perfeitamente ao centro */
+    margin: 0;
+}
+/* Organiza todos os botões lado a lado com espaçamento entre eles */
+.grade-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+/* Estiliza cada cartão e coloca o ícone em cima do texto */
+.cartao-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 140px; 
+  /* <--- MUDE SÓ ESSE NÚMERO (ex: 100px, 160px, 200px) */
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 16px 0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .banner h1 {
     font-size: 50px;
 }
@@ -57,6 +85,9 @@ background-color: #101010;
  border-top: 3px solid var(--vermelho-escuro);
  display: flex;
  gap: 40px;
+ /* espaço entre as escritas e a linha vermelha */
+ padding-top: 30px;
+ padding-bottom: 30px;
  
 }
 .footer-titulo {
@@ -82,24 +113,29 @@ footer img{
      max-width: 60px;
 }
 
+/* Empurra o bloco das redes sociais para o canto direito */
 .footer-content {
-  /* Ativa o Flexbox */
   display: flex;
-
-  /* Coloca o texto em cima e o ícone embaixo */
   flex-direction: column;
-
-  /* Empurra todo o conteúdo para o lado direito */
-  align-items: flex-end;
-
-  /* Espaço vertical entre o título e o ícone */
-  gap: 8px;
-
-  /* Faz a caixa ter o tamanho exato do conteúdo */
+  align-items: center;
+  gap: 12px;
   width: fit-content;
+  margin-left: auto;
+  margin-right: 40px;
+}
 
-  /* Empurra a caixa inteira para o lado direito */
-  margin-left: 700px;
+/* Deixa Instagram e Facebook lado a lado */
+.footer-redes {
+  display: flex;
+  gap: 25px;
+}
 
-
+/* Coloca o nome embaixo de cada ícone */
+.footer-redes a {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 6px;
 }

@@ -25,17 +25,93 @@
 
    
     </div>
+    <!-- Gerá a imagem da categoria -->
+<div class="Categoria">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+  <rect x="3" y="3" width="8" height="8" rx="2" fill="#f05454"/>
+  <rect x="13" y="3" width="8" height="8" rx="2" fill="#f05454"/>
+  <rect x="3" y="13" width="8" height="8" rx="2" fill="#f05454"/>
+  <rect x="13" y="13" width="8" height="8" rx="2" fill="#f05454"/>
+</svg>
+   <h2>Categorias</h2>
+</div>
 
-    <h2>Categorias:</h2>
+<!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
+<div class="grade-categorias">
 
-        <button type="button">Salgados</button>
+  <!-- Botão 1: Salgados -->
+  <button type="button" class="cartao-categoria">
+    <!-- Ícone de talheres -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
+  <!-- Garfo -->
+  <path d="M5 3v6a3 3 0 0 0 6 0V3"/>
+  <path d="M8 3v18"/>
+  <!-- Faca -->
+  <path d="M18 3v18"/>
+  <path d="M18 3a4 4 0 0 0-4 4v5a2 2 0 0 0 2 2h2"/>
+</svg>
 
-        <button type="button">Doces</button>
+    <!-- Texto do botão -->
+    <span>Salgados</span>
+  </button>
 
-        <button type="button">Bebidas</button>
+  <!-- Botão 2: Doces -->
+  <button type="button" class="cartao-categoria">
+    <!-- Ícone de bolo -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
+  <!-- Base retangular da fatia -->
+  <path d="M5 10.5H19V18.5C19 19.3 18.3 20 17.5 20H6.5C5.7 20 5 19.3 5 18.5V10.5Z"/>
+  <!-- Recheio levemente ondulado no meio -->
+  <path d="M5 15.2C6.5 14.5 7.5 16 9 15.2C10.5 14.5 11.5 16 13 15.2C14.5 14.5 15.5 16 17 15.2C18 14.8 18.5 15.2 19 15.2"/>
+  <!-- Lado esquerdo subindo inclinado até a cereja -->
+  <path d="M5 10.5L11.5 6"/>
+  <!-- Lado direito descendo da cereja -->
+  <path d="M14.5 6.5L19 10.5"/>
+  <!-- Gota / Cereja inclinada no topo -->
+  <path d="M13 3C14.5 5 15 6.2 15 7.2C15 8.3 14.1 9.2 13 9.2C11.9 9.2 11 8.3 11 7.2C11 6.2 11.5 5 13 3Z"/>
+</svg>
 
-        <button type="button">Caldos</button>
+     <!-- Texto do botão -->
+    <span>Doces</span>
+  </button>
 
+  <!-- Botão 3: Bebidas -->
+  <button type="button" class="cartao-categoria">
+    <!-- Ícone de copo -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
+  <!-- Canudo -->
+  <path d="M18 3h-3l-2 6"/>
+  <!-- Tampa do copo -->
+  <rect x="5" y="7" width="14" height="3" rx="1"/>
+  <!-- Corpo do copo -->
+  <path d="M6.5 10l1.5 10a1.5 1.5 0 0 0 1.5 1h5a1.5 1.5 0 0 0 1.5-1l1.5-10"/>
+  <!-- Detalhe central abaixo da tampa -->
+  <path d="M10 10a2 2 0 0 0 4 0"/>
+</svg>
+
+    <!-- Texto do botão -->
+    <span>Bebidas</span>
+  </button>
+
+  <!-- Botão 4: Caldos -->
+  <button type="button" class="cartao-categoria">
+    <!-- Ícone de tigela quente -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
+  <!-- Linhas de vapor -->
+  <path d="M8.5 3.5c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
+  <path d="M12 3c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
+  <path d="M15.5 3.5c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
+  <!-- Tigela -->
+  <path d="M4 12h16a8 8 0 0 1-16 0z"/>
+  <!-- Base da tigela -->
+  <path d="M9 20.5h6"/>
+</svg>
+
+       <!-- Texto do botão -->
+    <span>Caldos</span>
+  </button>
+
+</div>
 
 <!-- FOOTER -->
   <footer>
@@ -47,11 +123,14 @@
 </div>
 
 <div class="footer-content">
-<h2>Redes Sociais</h2>
       <div class="footer-redes">
-       <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank"><img
+       <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank">Instagram<img
          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
                              alt="instagram" width="22" height="22"></a>
+
+                             <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
+                               src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+                               alt="facebook" width="23.5" height="23.5"></a>
       </div>
     </div>
   </footer>
