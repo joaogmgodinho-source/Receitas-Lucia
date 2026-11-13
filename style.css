@@ -48,6 +48,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  
 }
 /* Estiliza cada cartão e coloca o ícone em cima do texto */
 .cartao-categoria {
@@ -65,7 +66,14 @@ body {
   padding: 16px 0;
   color: #ffffff;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+/* Faz o cartão subir e ganhar sombra ao passar o mouse */
+.cartao-categoria:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
 
 .banner h1 {
     font-size: 50px;
@@ -277,4 +285,51 @@ footer img{
   text-decoration: none;
   color: white;
   gap: 6px;
+}
+
+/* parte que fica o iframe da localização  */
+/* Remove o fundo e a seta */
+.botao-mapa {
+    list-style: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove a seta em diferentes navegadores */
+.botao-mapa::-webkit-details-marker {
+    display: none;
+}
+
+.botao-mapa::marker {
+    content: "";
+}
+
+/* Ícone do Google Maps */
+.icone-mapa {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.botao-mapa:hover .icone-mapa {
+    transform: scale(1.12);
+}
+
+/* Espaço do mapa */
+.conteudo-mapa {
+    margin-top: 10px;
+}
+
+/* Tamanho do iframe */
+.conteudo-mapa iframe {
+    width: 300px;
+    height: 220px;
+    border: none;
+    border-radius: 10px;
 }

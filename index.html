@@ -122,6 +122,32 @@
             height="23.5"></a>
       </div>
     </div>
+<!-- parte da localização usando um iframe -->
+  <div class="caixa-localizacao">
+    <details>
+        <!-- Ícone clicável, sem seta -->
+        <summary class="botao-mapa">
+            <img src="img/google-maps.png" alt="Google Maps" class="icone-mapa">
+        </summary>
+
+        <!-- Mapa exibido ao clicar -->
+        <div class="conteudo-mapa">
+            <iframe
+                src="https://www.google.com/maps?q=Brasil&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+            <a href="https://www.google.com/maps"
+               target="_blank"
+               rel="noopener noreferrer">
+                Abrir no Google Maps
+            </a>
+        </div>
+
+    </details>
+</div>
+
   </footer>
 </body>
 
