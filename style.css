@@ -12,8 +12,7 @@
 * {
     text-decoration: none;
     color: var(--texto-principal);
-    font-family: 'fira sans';
-
+    font-family: 'Fira sans';
 }
 
 header img {
@@ -83,7 +82,12 @@ body {
     url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZq_N9jxpCp0T4rfc3GG0j3Gl4YvX18scq0abxRHv2Ni9JqGv3YxjBdm09&s=10');
     border-radius: 20px;
     margin: 10px;
-    padding: 5px;
+    padding: 20px;
+    background-repeat: no-repeat;    
+    /* 3. Posiciona a foto: '85%' joga ela para a direita e 'center' centraliza na vertical */
+    background-position: 100% center; 
+    background-size: 90% ;
+
 }
 
 .banner p {
@@ -91,7 +95,7 @@ body {
 }
 
 span {
-    color: var(--vermelho-escuro);
+    color: var(--vermelho-destaque);
 }
 /* Deixa o icone do fogo do lado da escrita */
 .receitas{
@@ -214,7 +218,6 @@ span {
 .btn-recipe:hover {
   background-color: #d62839;
 }
-
 /* roodape*/
 footer{
 background-color: #101010;
