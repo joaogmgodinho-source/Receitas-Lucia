@@ -57,8 +57,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-
-  width: 140px; 
+  width: 100%;
+  max-width: 460px; 
   /* <--- MUDE SÓ ESSE NÚMERO (ex: 100px, 160px, 200px) */
   background-color: #242424;
   border: 1px solid #3a3a3a;
@@ -73,7 +73,14 @@ body {
 }
 
 .banner {
-    background: linear-gradient(to right, #101010, #1A1F2E);
+    background-image: 
+    linear-gradient(
+      to right, 
+      #101010 35%, 
+      rgba(22, 22, 24, 0.7) 55%, 
+      rgba(22, 22, 24, 0) 100%
+    ),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZq_N9jxpCp0T4rfc3GG0j3Gl4YvX18scq0abxRHv2Ni9JqGv3YxjBdm09&s=10');
     border-radius: 20px;
     margin: 10px;
     padding: 5px;
