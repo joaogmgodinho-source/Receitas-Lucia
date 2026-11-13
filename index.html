@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,121 @@
   <link rel="stylesheet" href="https://cloudflare.com">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
-
     <img src="img/logo-lucia.png" alt="logo lucia">
-    <h1>Receitas - Lucia Fernandes Lopes</h1>
-
+    <h1><span>Receitas</span> - Lucia Fernandes Lopes</h1>
   </header>
 
-    <div class="banner">   
+  <div class="banner">
 
     <h1>Receitas do Lucia</h1>
+    <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada
+      pelos alunos de todo o ensino médio e catalogada aqui</p>
 
-    <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada pelos alunos de todo o ensino médio e catalogada aqui</p>
-    
+  </div>
+  <!-- imagem da categoria -->
+  <div class="Categoria">
+    <img src="img/categorias.png" alt="icone de categoria"width="24" height="24">
+    <h2>Categorias</h2>
+  </div>
+
+  <!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
+  <div class="grade-categorias">
+    <!-- Botão 1: Salgados -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de talheres -->
+        <img src="img/salgados.png" alt="icone de salgados"width="25" height="25">
+        <span>Salgados</span>
+    </button>
+
+    <!-- Botão 2: Doces -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de bolo -->
+        <img src="img/doces.png" alt="icone de doces"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Doces</span>
+    </button>
+
+    <!-- Botão 3: Bebidas -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de copo -->
+        <img src="img/bebidas.png" alt="icone de bebidas"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Bebidas</span>
+    </button>
+
+    <!-- Botão 4: Caldos -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de tigela quente -->
+      <img src="img/caldos.png" alt="icone de caldos"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Caldos</span>
+    </button>
+  </div>
+
+  <!-- icone e titulo das Receitas -->
+  <div class="receitas">
+    <!-- Ícone de receitas -->
+    <img src="img/receitas.png" alt="logo receitas"width="24" height="24">
+    <h2>Receitas</h2>
+  </div>
+
+  <!-- Cartão da receita (CARD) -->
+  <div class="recipe-card">
+<!-- imagem da receita -->
+    <div class="card-image">
+      <img src="https://unsplash.com" alt="Lasanha à Bolonhesa">
     </div>
 
+    <!-- Conteúdo da carta de receita -->
+    <div class="card-content">
+      <h3 class="recipe-title">Lasanha à Bolonhesa</h3>
 
-    <h2>Categorias:</h2>
+      <div class="recipe-meta">
+        <span class="meta-item">
+           <img src="img/relogio.png" alt="icone do relogio"width="20" height="20">
+          60 min
+        </span>
 
-    <div class="categorias">
+        <span class="meta-item">
+           <img src="img/garfo e faca.png" alt="icone de que tipo é a comida"width="20" height="20">
+          6 porções
+        </span>
+      </div>
 
-    <button type="button">Salgados</button>
+      <div class="card-footer">
+        <a href="#" class="btn-recipe">
+          Ver Receita <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <button type="button">Doces</button>
-
-    <button type="button">Bebidas</button>
-
-    <button type="button">Caldos</button>
-
+  <!-- FOOTER -->
+  <footer>
+    <!-- título do footer que contem logo e descrição -->
+    <div class="footer-titulo">
+      <img src="img/logo-lucia.png" alt="logo lucia">
+      <h1>Lucia Fernandes Lopes</h1>
+      <p>Receitas que fazem bem!</p>
     </div>
 
+    <!-- Fiz essa div para poder mecher em todas as redes sociais no CSS -->
+    <div class="footer-content">
+      <!-- aqui fica todas as redes sociais -->
+      <div class="footer-redes">
+        <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank">Instagram<img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="instagram" width="22"
+            height="22"></a>
+        <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="facebook" width="23.5"
+            height="23.5"></a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
