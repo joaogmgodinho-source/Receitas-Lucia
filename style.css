@@ -12,7 +12,8 @@
 * {
     text-decoration: none;
     color: var(--texto-principal);
-    font-family: '';
+    font-family: 'fira sans';
+
 }
 
 header img {
@@ -206,6 +207,7 @@ span {
 .btn-recipe:hover {
   background-color: #d62839;
 }
+
 /* roodape*/
 footer{
 background-color: #101010;

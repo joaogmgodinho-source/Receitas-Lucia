@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,159 +8,87 @@
   <link rel="stylesheet" href="https://cloudflare.com">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
-
     <img src="img/logo-lucia.png" alt="logo lucia">
     <h1><span>Receitas</span> - Lucia Fernandes Lopes</h1>
-
   </header>
 
-    <div class="banner">   
+  <div class="banner">
 
     <h1>Receitas do Lucia</h1>
-    <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada pelos alunos de todo o ensino médio e catalogada aqui</p>
-    
-    </div>
-    <!-- Gerá a imagem da categoria -->
-<div class="Categoria">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-  <rect x="3" y="3" width="8" height="8" rx="2" fill="#f05454"/>
-  <rect x="13" y="3" width="8" height="8" rx="2" fill="#f05454"/>
-  <rect x="3" y="13" width="8" height="8" rx="2" fill="#f05454"/>
-  <rect x="13" y="13" width="8" height="8" rx="2" fill="#f05454"/>
-</svg>
-   <h2>Categorias</h2>
-</div>
+    <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada
+      pelos alunos de todo o ensino médio e catalogada aqui</p>
 
-<!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
-<div class="grade-categorias">
-  <!-- Botão 1: Salgados -->
-  <button type="button" class="cartao-categoria">
-    <!-- Ícone de talheres -->
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
-  <!-- garfo -->
-<path d="M5 3v6a3 3 0 0 0 6 0V3"/>
-  <path d="M8 3v18"/>
-  <!-- Faca -->
-  <path d="M18 3v18"/>
-  <path d="M18 3a4 4 0 0 0-4 4v5a2 2 0 0 0 2 2h2"/>
-    <span>Salgados</span>
-  </button>
+  </div>
+  <!-- imagem da categoria -->
+  <div class="Categoria">
+    <img src="img/categorias.png" alt="icone de categoria"width="24" height="24">
+    <h2>Categorias</h2>
+  </div>
 
-  <!-- Botão 2: Doces -->
-  <button type="button" class="cartao-categoria">
-    <!-- Ícone de bolo -->
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
-  <!-- Base retangular da fatia -->
-  <path d="M5 10.5H19V18.5C19 19.3 18.3 20 17.5 20H6.5C5.7 20 5 19.3 5 18.5V10.5Z"/>
-  <!-- Recheio levemente ondulado no meio -->
-  <path d="M5 15.2C6.5 14.5 7.5 16 9 15.2C10.5 14.5 11.5 16 13 15.2C14.5 14.5 15.5 16 17 15.2C18 14.8 18.5 15.2 19 15.2"/>
-  <!-- Lado esquerdo subindo inclinado até a cereja -->
-  <path d="M5 10.5L11.5 6"/>
-  <!-- Lado direito descendo da cereja -->
-  <path d="M14.5 6.5L19 10.5"/>
-  <!-- Gota / Cereja inclinada no topo -->
-  <path d="M13 3C14.5 5 15 6.2 15 7.2C15 8.3 14.1 9.2 13 9.2C11.9 9.2 11 8.3 11 7.2C11 6.2 11.5 5 13 3Z"/>
-</svg>
-     <!-- Texto do botão -->
-    <span>Doces</span>
-  </button>
+  <!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
+  <div class="grade-categorias">
+    <!-- Botão 1: Salgados -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de talheres -->
+        <img src="img/salgados.png" alt="icone de salgados"width="25" height="25">
+        <span>Salgados</span>
+    </button>
 
-  <!-- Botão 3: Bebidas -->
-  <button type="button" class="cartao-categoria">
-    <!-- Ícone de copo -->
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
-  <!-- Canudo -->
-  <path d="M18 3h-3l-2 6"/>
-  <!-- Tampa do copo -->
-  <rect x="5" y="7" width="14" height="3" rx="1"/>
-  <!-- Corpo do copo -->
-  <path d="M6.5 10l1.5 10a1.5 1.5 0 0 0 1.5 1h5a1.5 1.5 0 0 0 1.5-1l1.5-10"/>
-  <!-- Detalhe central abaixo da tampa -->
-  <path d="M10 10a2 2 0 0 0 4 0"/>
-</svg>
-    <!-- Texto do botão -->
-    <span>Bebidas</span>
-  </button>
+    <!-- Botão 2: Doces -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de bolo -->
+        <img src="img/doces.png" alt="icone de doces"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Doces</span>
+    </button>
 
-  <!-- Botão 4: Caldos -->
-  <button type="button" class="cartao-categoria">
-    <!-- Ícone de tigela quente -->
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f05454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://w3.org">
-  <!-- Linhas de vapor -->
-  <path d="M8.5 3.5c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
-  <path d="M12 3c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
-  <path d="M15.5 3.5c0 1.2-.8 1.8-.8 3s.8 1.8.8 3"/>
-  <!-- Tigela -->
-  <path d="M4 12h16a8 8 0 0 1-16 0z"/>
-  <!-- Base da tigela -->
-  <path d="M9 20.5h6"/>
-</svg>
-       <!-- Texto do botão -->
-    <span>Caldos</span>
-  </button>
-</div>
+    <!-- Botão 3: Bebidas -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de copo -->
+        <img src="img/bebidas.png" alt="icone de bebidas"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Bebidas</span>
+    </button>
 
-<!-- icone e titulo das Receitas -->
-<div class="receitas">
-  <!-- Container principal do ícone vetorial de chama (100x100px com fundo transparente) -->
-<svg xmlns="http://w3.org" viewBox="0 0 100 100" width="25" height="25">
-  <!-- Traçado da chama em vermelho coral (#E5484D) com três pontas e recorte interno na base -->
-  <path fill="#E5484D" fill-rule="evenodd" d="
-    M 54 8
-    C 48 22, 57 31, 65 40
-    C 71 47, 73 54, 71 60
-    C 75 56, 76 50, 76 44
-    C 76 38, 80 33, 85 31
-    C 82 37, 83 43, 87 50
-    C 92 59, 92 72, 84 82
-    C 76 91, 64 95, 53 95
-    C 61 91, 64 83, 62 75
-    C 60 67, 54 61, 50 56
-    C 46 61, 40 67, 38 75
-    C 36 83, 39 91, 47 95
-    C 36 95, 24 91, 16 82
-    C 8 72, 8 59, 13 50
-    C 17 42, 22 36, 28 32
-    C 26 39, 28 46, 33 50
-    C 38 53, 42 50, 40 44
-    C 36 35, 34 25, 41 16
-    C 45 11, 50 9, 54 8
-    Z
-  "/>
-</svg>
-  <h2>Receitas</h2>
-</div>
-<div class="recipe-card">
+    <!-- Botão 4: Caldos -->
+    <button type="button" class="cartao-categoria">
+      <!-- Ícone de tigela quente -->
+      <img src="img/caldos.png" alt="icone de caldos"width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Caldos</span>
+    </button>
+  </div>
+
+  <!-- icone e titulo das Receitas -->
+  <div class="receitas">
+    <!-- Ícone de receitas -->
+    <img src="img/receitas.png" alt="logo receitas"width="24" height="24">
+    <h2>Receitas</h2>
+  </div>
+
+  <!-- Cartão da receita (CARD) -->
+  <div class="recipe-card">
+<!-- imagem da receita -->
     <div class="card-image">
       <img src="https://unsplash.com" alt="Lasanha à Bolonhesa">
-      <button class="favorite-btn" aria-label="Favoritar receita">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-      </button>
     </div>
-<!-- teste -->
+
+    <!-- Conteúdo da carta de receita -->
     <div class="card-content">
       <h3 class="recipe-title">Lasanha à Bolonhesa</h3>
-      
+
       <div class="recipe-meta">
         <span class="meta-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
+           <img src="img/relogio.png" alt="icone do relogio"width="20" height="20">
           60 min
         </span>
 
         <span class="meta-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
-            <path d="M7 2v20"></path>
-            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
-          </svg>
+           <img src="img/garfo e faca.png" alt="icone de que tipo é a comida"width="20" height="20">
           6 porções
         </span>
       </div>
@@ -172,29 +101,28 @@
     </div>
   </div>
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
-<div class="footer-titulo">
-<img src="img/logo-lucia.png" alt="logo lucia">
+    <!-- título do footer que contem logo e descrição -->
+    <div class="footer-titulo">
+      <img src="img/logo-lucia.png" alt="logo lucia">
+      <h1>Lucia Fernandes Lopes</h1>
+      <p>Receitas que fazem bem!</p>
+    </div>
 
-<h1>Lucia Fernandes Lopes</h1>
-<p>Receitas que fazem bem!</p>
-</div>
-
-<div class="footer-content">
+    <!-- Fiz essa div para poder mecher em todas as redes sociais no CSS -->
+    <div class="footer-content">
+      <!-- aqui fica todas as redes sociais -->
       <div class="footer-redes">
-       <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank">Instagram<img
-         src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
-                             alt="instagram" width="22" height="22"></a>
-
-                             <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
-                               src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-                               alt="facebook" width="23.5" height="23.5"></a>
+        <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank">Instagram<img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="instagram" width="22"
+            height="22"></a>
+        <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="facebook" width="23.5"
+            height="23.5"></a>
       </div>
     </div>
   </footer>
-
-
-
 </body>
+
 </html>
