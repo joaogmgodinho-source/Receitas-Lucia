@@ -12,7 +12,7 @@
 * {
     text-decoration: none;
     color: var(--texto-principal);
-    font-family: 'Fira Sans';
+    font-family: 'Fira sans';
 }
 
 header img {
@@ -27,11 +27,44 @@ header {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-bottom: 10px;
 }
 
 body {
     background-color: var(--bg-principal);
+}
+/* deixa a escrita "Categorias" do lado do icone */
+.Categoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.Categoria h2 {
+   /* Remove a margem padrão do h2 para alinhar perfeitamente ao centro */
+    margin: 0;
+}
+/* Organiza todos os botões lado a lado com espaçamento entre eles */
+.grade-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+/* Estiliza cada cartão e coloca o ícone em cima do texto */
+.cartao-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 460px; 
+  /* <--- MUDE SÓ ESSE NÚMERO (ex: 100px, 160px, 200px) */
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 16px 0;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .banner h1 {
@@ -39,33 +72,209 @@ body {
 }
 
 .banner {
-    background: linear-gradient(to right, #101010, #1A1F2E);
+    background-image: 
+    linear-gradient(
+      to right, 
+      #101010 35%, 
+      rgba(22, 22, 24, 0.7) 55%, 
+      rgba(22, 22, 24, 0) 100%
+    ),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrlj1uCOYa8nGHd6LI_CUCtxlOL325N5L1FQI1D1rbA&s=10');
     border-radius: 20px;
     margin: 10px;
-    padding: 5px;
+    padding: 20px;
+    background-repeat: no-repeat;    
+    /* 3. Posiciona a foto: '85%' joga ela para a direita e 'center' centraliza na vertical */
+    background-position: 100% center; 
+    background-size: 90% ;
+
 }
 
 .banner p {
     font-size: 20px;
 }
 
-
-
-button {
-    padding: 30px;   
-    color: var(--texto-principal);
-    background-color: var(--bg-cards);
-    border: none;
+span {
+    color: var(--vermelho-destaque);
+}
+/* Deixa o icone do fogo do lado da escrita */
+.receitas{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+/* teste */
+.recipe-card {
+  background-color: #1e1e1e;
+  width: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-button:hover{
-    cursor: pointer;
+.recipe-card * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.categorias {
-    display: flex;
-    justify-content: center; /* Centraliza os botões na horizontal */
-    align-items: center;     /* Alinha os botões na vertical */
-    gap: 15px;               /* Dá um espaçamento entre cada botão */
-    width: 100%;             /* Garante que a div ocupe a largura toda da tela */
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(20, 20, 20, 0.75);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.favorite-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.favorite-btn:hover {
+  background-color: #e63946;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.recipe-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.recipe-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #a0a0a0;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-item svg {
+  width: 15px;
+  height: 15px;
+  color: #888888;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-recipe {
+  background-color: #e63946;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-recipe:hover {
+  background-color: #d62839;
+}
+/* roodape*/
+footer{
+background-color: #101010;
+ border-top: 3px solid var(--vermelho-escuro);
+ display: flex;
+ gap: 40px;
+ /* espaço entre as escritas e a linha vermelha */
+ padding-top: 30px;
+ padding-bottom: 30px;
+ 
+}
+.footer-titulo {
+  /* Ativa o Flexbox, que coloca os itens lado a lado por padrão */
+  display: flex;
+  /* Alinha a logo e o texto no centro verticalmente (um na mesma altura do outro) */
+  align-items: center;
+  /* Cria um espaço de 15px entre a logo e o começo do texto */
+  gap: 15px;
+}
+footer h1{
+    font-size: 25px;
+    /* barra laterral */
+    border-right: 4px solid #B91C1C;
+    padding-right: 15px;
+   
+}
+footer p{
+    font-size: 20px;
+    color:#B8B8B8;
+}
+footer img{
+     max-width: 60px;
+}
+
+/* Empurra o bloco das redes sociais para o canto direito */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+/* Deixa Instagram e Facebook lado a lado */
+.footer-redes {
+  display: flex;
+  gap: 25px;
+}
+
+/* Coloca o nome embaixo de cada ícone */
+.footer-redes a {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 6px;
 }
