@@ -32,6 +32,11 @@ header {
 body {
     background-color: var(--bg-principal);
 }
+/* Parte de pesquisa */
+
+
+
+
 /* deixa a escrita "Categorias" do lado do icone */
 .Categoria {
   display: flex;
@@ -58,7 +63,7 @@ body {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  max-width: 460px; 
+  max-width: 360px; 
   /* <--- MUDE SÓ ESSE NÚMERO (ex: 100px, 160px, 200px) */
   background-color: #242424;
   border: 1px solid #3a3a3a;
@@ -226,6 +231,84 @@ span {
 .btn-recipe:hover {
   background-color: #d62839;
 }
+
+/* PERSONALIZAÇÃO DO TAMANHO DA PESQUISA*/
+
+.pesquisa {
+    width: 45%;          /* Largura da barra */
+    max-width: 1100px;    /* Largura máxima da barra */
+    height: 40px;         /* Altura da barra */
+}
+
+/* TAMANHO DO CAMPO DE TEXTO */
+.pesquisa input {
+    font-size: 20px;      /* Tamanho das letras */
+    padding-left: 65px;   /* Distância do texto até a lupa */
+}
+
+/* TAMANHO DO BOTÃO */
+.pesquisa button {
+    padding: 0 18px;      /* Largura do botão */
+    font-size: 20px;      /* Tamanho do texto Buscar */
+}
+
+/* TAMANHO DA LUPA */
+.icone-pesquisa {
+    font-size: 20px; /* Tamanho do ícone */
+    left: 28px;      /* Distância da esquerda */
+    top: 50%;        /* Centralização vertical */
+
+    /* Não precisa alterar abaixo */
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--texto-principal);
+}
+
+/*ESTILO DA BARRA DE PESQUISA*/
+
+/* Caixa principal */
+.pesquisa {
+    display: flex;
+    align-items: center;
+    background: var(--bg-cards);
+    border: 2px solid #554347;
+    border-radius: 13.5px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Campo onde o usuário digita */
+.pesquisa input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--texto-principal);
+}
+
+/* Texto de orientação */
+.pesquisa input::placeholder {
+    color: var(--texto-secundario);
+}
+
+/* Botão Buscar */
+.pesquisa button {
+    height: 100%;
+    background: var(--vermelho-destaque);
+    border: none;
+    color: var(--texto-principal);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Efeito ao passar o cursor */
+.pesquisa button:hover {
+    background: var(--vermelho-escuro);
+}
+
 /* roodape*/
 footer{
 background-color: #101010;
@@ -269,12 +352,14 @@ footer img{
   width: fit-content;
   margin-left: auto;
   margin-right: 40px;
+  
 }
 
 /* Deixa Instagram e Facebook lado a lado */
 .footer-redes {
   display: flex;
   gap: 25px;
+  
 }
 
 /* Coloca o nome embaixo de cada ícone */
@@ -287,49 +372,12 @@ footer img{
   gap: 6px;
 }
 
-/* parte que fica o iframe da localização  */
-/* Remove o fundo e a seta */
-.botao-mapa {
-    list-style: none;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Remove a seta em diferentes navegadores */
-.botao-mapa::-webkit-details-marker {
-    display: none;
-}
-
-.botao-mapa::marker {
-    content: "";
-}
-
-/* Ícone do Google Maps */
-.icone-mapa {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    background: transparent;
+/* Animação dos links das redes sociais */
+.footer-redes a {
     transition: transform 0.2s ease;
 }
-
-/* Efeito ao passar o mouse */
-.botao-mapa:hover .icone-mapa {
-    transform: scale(1.12);
+/* Aumenta o item ao passar o cursor */
+.footer-redes a:hover {
+    transform: scale(1.2);
 }
 
-/* Espaço do mapa */
-.conteudo-mapa {
-    margin-top: 10px;
-}
-
-/* Tamanho do iframe */
-.conteudo-mapa iframe {
-    width: 300px;
-    height: 220px;
-    border: none;
-    border-radius: 10px;
-}

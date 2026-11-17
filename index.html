@@ -7,6 +7,8 @@
   <title>Receitas - Lucia</title>
   <link rel="stylesheet" href="https://cloudflare.com">
   <link rel="stylesheet" href="style.css">
+  <!-- Biblioteca de ícones Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -21,8 +23,19 @@
     <h1>Receitas do Lucia</h1>
     <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada
       pelos alunos de todo o ensino médio e catalogada aqui</p>
+        <!-- Barra de pesquisa -->
+<div class="pesquisa">
+    <!-- Ícone da lupa -->
+    <i class="fa-solid fa-magnifying-glass icone-pesquisa"></i>
+    <!-- Campo onde o usuário digita -->
+    <input type="text" id="campoPesquisa" placeholder="Pesquisar receitas...">
+    <!-- Botão que executa a pesquisa -->
+    <button onclick="pesquisar()">Pesquisar</button>
 
+</div>
   </div>
+  
+
   <!-- imagem da categoria -->
   <div class="Categoria">
     <img src="img/categorias.png" alt="icone de categoria"width="24" height="24">
@@ -120,33 +133,17 @@
         <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
             src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="facebook" width="23.5"
             height="23.5"></a>
+
+            
+             <!-- esta dentro DA DIV footer-redes para ficar na mesma posição das redes sociais -->
+     <!-- Localização  -->
+        <div class="botao-mapa">
+           <a href="https://www.google.com/maps/place/27%C2%B050'12.8%22S+50%C2%B020'39.7%22W/@-27.836893,-50.3469399,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-27.836893!4d-50.344365?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Localização<img
+            src="img/google-maps.png" alt="Localização" width="23.5"
+            height="23.5"></a>
+</div>
       </div>
     </div>
-<!-- parte da localização usando um iframe -->
-  <div class="caixa-localizacao">
-    <details>
-        <!-- Ícone clicável, sem seta -->
-        <summary class="botao-mapa">
-            <img src="img/google-maps.png" alt="Google Maps" class="icone-mapa">
-        </summary>
-
-        <!-- Mapa exibido ao clicar -->
-        <div class="conteudo-mapa">
-            <iframe
-                src="https://www.google.com/maps?q=Brasil&output=embed"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-
-            <a href="https://www.google.com/maps"
-               target="_blank"
-               rel="noopener noreferrer">
-                Abrir no Google Maps
-            </a>
-        </div>
-
-    </details>
-</div>
 
   </footer>
 </body>
