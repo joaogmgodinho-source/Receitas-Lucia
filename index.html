@@ -9,14 +9,27 @@
   <link rel="stylesheet" href="style.css">
   <!-- Biblioteca de ícones Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
   <header>
     <img src="img/logo-lucia.png" alt="logo lucia">
-    <h1><span>Receitas</span> - Lucia Fernandes Lopes</h1>
-  </header>
+
+    <h1><span>IFA na Mesa</span> - Lúcia Fernandes Lopes</h1>
+
+    <a href="sobre.html" class="link-sobre">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre
+    </a>
+
+     <!-- Botão Redes Sociais -->
+    <a href="#footer" class="link-redes">
+        <i class="fa-solid fa-share-nodes"></i>
+        Redes sociais
+    </a>
+</header>
 
   <div class="banner">
 
@@ -29,8 +42,8 @@
     <i class="fa-solid fa-magnifying-glass icone-pesquisa"></i>
     <!-- Campo onde o usuário digita -->
     <input type="text" id="campoPesquisa" placeholder="Pesquisar receitas...">
-    <!-- Botão que executa a pesquisa -->
-    <button onclick="pesquisar()">Pesquisar</button>
+
+  
 
 </div>
   </div>
@@ -257,11 +270,11 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer">
     <!-- título do footer que contem logo e descrição -->
     <div class="footer-titulo">
       <img src="img/logo-lucia.png" alt="logo lucia">
-      <h1>Lucia Fernandes Lopes</h1>
+      <h1>Lúcia Fernandes Lopes</h1>
       <p>Receitas que fazem bem!</p>
     </div>
 

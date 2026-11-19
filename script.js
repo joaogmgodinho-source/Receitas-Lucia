@@ -117,29 +117,193 @@ if (tituloEl) {
   }
 }
 
-// 3. Filtro por categoria (só roda se estiver no index.html)
+// ==========================================
+// 3. PESQUISA E FILTRO POR CATEGORIA
+// ==========================================
+
+// Seleciona os botões de categoria
 const botoesCategoria = document.querySelectorAll(".cartao-categoria");
+
+// Seleciona todos os cards de receitas
 const cardsReceitas = document.querySelectorAll(".recipe-card");
 
-botoesCategoria.forEach(botao => {
-  botao.addEventListener("click", () => {
-    const categoriaSelecionada = botao.dataset.categoria;
-    const jaEstaAtivo = botao.classList.contains("ativo");
+// Seleciona o campo de pesquisa
+const campoPesquisa = document.getElementById("campoPesquisa");
 
-    // limpa o destaque de todos os botões
-    botoesCategoria.forEach(b => b.classList.remove("ativo"));
+// Guarda a categoria selecionada
+let categoriaSelecionada = null;
 
-    // clicar de novo no mesmo botão mostra todas as receitas
-    if (jaEstaAtivo) {
-      cardsReceitas.forEach(card => (card.style.display = "flex"));
-      return;
+// Seleciona a área onde ficam os cards
+const areaReceitas = document.querySelector(".cards-receitas");
+
+// ==========================================
+// 4. MENSAGEM DE NENHUM RESULTADO
+// ==========================================
+
+// Verifica se a mensagem já existe
+let mensagemSemResultado = document.getElementById("semResultado");
+
+// Se não existir, cria a mensagem
+if (areaReceitas && !mensagemSemResultado) {
+
+    mensagemSemResultado = document.createElement("p");
+
+    mensagemSemResultado.id = "semResultado";
+    mensagemSemResultado.textContent = "Nenhuma receita encontrada.";
+
+    mensagemSemResultado.style.display = "none";
+    mensagemSemResultado.style.textAlign = "center";
+    mensagemSemResultado.style.width = "100%";
+
+    // Adiciona a mensagem na área das receitas
+    areaReceitas.appendChild(mensagemSemResultado);
+}
+
+// ==========================================
+// 5. NORMALIZAR TEXTO
+// ==========================================
+
+// Deixa tudo minúsculo e remove os acentos
+// Exemplo: "Café" vira "cafe"
+function normalizarTexto(texto) {
+
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+}
+
+// ==========================================
+// 6. FUNÇÃO DE PESQUISA
+// ==========================================
+
+function pesquisar() {
+
+    // Pega o texto digitado
+    const texto = normalizarTexto(campoPesquisa.value.trim());
+
+    // Divide a pesquisa em palavras separadas
+    const palavrasPesquisadas = texto
+        .split(/\s+/)
+        .filter(Boolean);
+
+    // Contador de receitas encontradas
+    let quantidadeEncontrada = 0;
+
+    // Percorre todos os cards
+    cardsReceitas.forEach(card => {
+
+        // Pega SOMENTE o título da receita
+        const titulo = card.querySelector(".recipe-title");
+
+        // Normaliza o título
+        const tituloNormalizado = titulo
+            ? normalizarTexto(titulo.innerText)
+            : "";
+
+        // Divide o título em palavras completas
+        const palavrasDoTitulo = tituloNormalizado.split(/\s+/);
+
+        // Verifica se todas as palavras pesquisadas
+        // existem separadamente no título
+        const encontrouTexto = palavrasPesquisadas.every(palavra =>
+            palavrasDoTitulo.includes(palavra)
+        );
+
+        // Verifica se pertence à categoria selecionada
+        const encontrouCategoria =
+            categoriaSelecionada === null ||
+            card.dataset.categoria === categoriaSelecionada;
+
+        // Se encontrar o texto e a categoria, mostra o card
+        if (encontrouTexto && encontrouCategoria) {
+
+            card.style.display = "flex";
+
+            quantidadeEncontrada++;
+
+        } else {
+
+            // Caso contrário, esconde o card
+            card.style.display = "none";
+
+        }
+
+    });
+
+    // Mostra mensagem se não encontrar nenhuma receita
+    if (mensagemSemResultado) {
+
+        mensagemSemResultado.style.display =
+            quantidadeEncontrada === 0 ? "block" : "none";
+
     }
 
-    botao.classList.add("ativo");
+}
 
-    cardsReceitas.forEach(card => {
-      card.style.display =
-        card.dataset.categoria === categoriaSelecionada ? "flex" : "none";
+// ==========================================
+// 7. PESQUISA ENQUANTO DIGITA
+// ==========================================
+
+if (campoPesquisa) {
+
+    // Pesquisa automaticamente enquanto digita
+    campoPesquisa.addEventListener("input", pesquisar);
+
+    // Permite pesquisar apertando ENTER
+    campoPesquisa.addEventListener("keydown", function(evento) {
+
+        if (evento.key === "Enter") {
+
+            pesquisar();
+
+        }
+
     });
-  });
+
+}
+
+// ==========================================
+// 8. FILTRO DOS BOTÕES DE CATEGORIA
+// ==========================================
+
+botoesCategoria.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        // Pega a categoria do botão clicado
+        const categoria = botao.dataset.categoria;
+
+        // Verifica se já está selecionado
+        const jaEstaAtivo = botao.classList.contains("ativo");
+
+        // Remove o destaque de todos os botões
+        botoesCategoria.forEach(b => {
+
+            b.classList.remove("ativo");
+
+        });
+
+        // Se clicar novamente na mesma categoria,
+        // remove o filtro
+        if (jaEstaAtivo) {
+
+            categoriaSelecionada = null;
+
+        } else {
+
+            // Seleciona a nova categoria
+            categoriaSelecionada = categoria;
+
+            // Destaca o botão selecionado
+            botao.classList.add("ativo");
+
+        }
+
+        // Atualiza a pesquisa junto com a categoria
+        pesquisar();
+
+    });
+
 });

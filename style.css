@@ -29,13 +29,163 @@ header {
     gap: 30px;
 }
 
+/* ==================
+   HEADER BOTÕES
+===================== */
+
+/* Define o cabeçalho como referência */
+header {
+    position: relative;
+}
+
+/* Estilo geral dos botões */
+header .link-sobre,
+header .link-redes {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--texto-principal);
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    white-space: nowrap;
+
+    /* Alinha ícone e texto */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e a escrita */
+}
+
+/* Botão Sobre */
+header .link-sobre {
+    right: 190px;
+}
+
+/* Botão Redes Sociais */
+header .link-redes {
+    right: 30px;
+}
+
+/* Tamanho dos ícones */
+header .link-sobre i,
+header .link-redes i {
+    font-size: 17px;
+    margin: 0;
+}
+
+/* Efeito ao passar o mouse */
+header .link-sobre:hover,
+header .link-redes:hover {
+    color: var(--vermelho-destaque);
+    border-color: var(--vermelho-escuro);
+    box-shadow: 0 0 7px rgba(185, 28, 28, 0.35);
+}
+
+/* =====================================
+   PÁGINA SOBRE 
+===================================== */
+
+.sobre-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* Banner da página */
+.sobre-banner {
+    background: var(--bg-cards);
+    padding: 45px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(185, 28, 28, 0.25);
+    margin-bottom: 35px;
+}
+
+.sobre-banner h1 {
+    color: var(--vermelho-destaque);
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.sobre-banner p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+/* Organização dos blocos */
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* Cards de informação */
+.sobre-bloco {
+    background: var(--bg-cards);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.sobre-bloco:hover {
+    border-color: var(--vermelho-escuro);
+    box-shadow: 0 0 10px rgba(185, 28, 28, 0.25);
+    transform: translateY(-4px);
+}
+
+/* Ícones */
+.sobre-icone {
+    color: var(--vermelho-destaque);
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.sobre-bloco h2 {
+    color: var(--texto-principal);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.sobre-bloco p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Botão voltar */
+.sobre-voltar {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.sobre-voltar a {
+    background: var(--vermelho-destaque);
+    color: var(--texto-principal);
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.sobre-voltar a:hover {
+    background: var(--vermelho-escuro);
+    box-shadow: 0 0 10px rgba(185, 28, 28, 0.4);
+}
+
+
 body {
     background-color: var(--bg-principal);
 }
+/* ============================
+Final da página Sobre
+============================ */
+
 /* Parte de pesquisa */
-
-
-
 
 /* deixa a escrita "Categorias" do lado do icone */
 .Categoria {
@@ -63,7 +213,7 @@ body {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  max-width: 455px; 
+  max-width: 320px; 
   /* <--- MUDE SÓ ESSE NÚMERO (ex: 100px, 160px, 200px) */
   background-color: #242424;
   border: 1px solid #3a3a3a;
@@ -246,12 +396,6 @@ span {
     padding-left: 65px;   /* Distância do texto até a lupa */
 }
 
-/* TAMANHO DO BOTÃO */
-.pesquisa button {
-    padding: 0 18px;      /* Largura do botão */
-    font-size: 20px;      /* Tamanho do texto Buscar */
-}
-
 /* TAMANHO DA LUPA */
 .icone-pesquisa {
     font-size: 20px; /* Tamanho do ícone */
@@ -293,21 +437,25 @@ span {
     color: var(--texto-secundario);
 }
 
-/* Botão Buscar */
-.pesquisa button {
-    height: 100%;
-    background: var(--vermelho-destaque);
-    border: none;
-    color: var(--texto-principal);
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
+/* Campo de pesquisa */
+.pesquisa input#campoPesquisa {
+    border: 1px solid transparent;
+    border-radius: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o cursor */
-.pesquisa button:hover {
-    background: var(--vermelho-escuro);
+/* Borda com brilho ao passar o cursor */
+.pesquisa input#campoPesquisa:hover {
+    border: 1px solid var(--vermelho-escuro);
+
+    box-shadow:
+        0 0 4px var(--vermelho-escuro),
+        0 0 9px rgba(185, 28, 28, 0.4);
 }
+
+
+
 
 /* roodape*/
 footer{
@@ -411,67 +559,9 @@ footer img{
   margin: 30px auto;
   padding: 0 20px;
 }
-
-/* Garante que o card ocupe o espaço correto e tenha um visual limpo */
-.recipe-card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.cartao-categoria.ativo{
+  border: 2px solid var(--vermelho-escuro);  
 }
-
-.recipe-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card-image img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.recipe-title {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: var(--texto-principal);
-}
-
-.recipe-meta {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 16px;
-  font-size: 0.9rem;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.card-footer {
-  margin-top: auto;
-}
-
-.btn-recipe {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.cartao-categoria.ativo {
-  border: 2px solid var(--vermelho-escuro); /* troque pela cor do seu site */
 /* Animação dos links das redes sociais */
 .footer-redes a {
     transition: transform 0.2s ease;
@@ -481,3 +571,492 @@ footer img{
     transform: scale(1.2);
 }
 
+
+
+
+/* Codigo Para se adaptar para o Celular */
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES E TABLETS
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    /* CABEÇALHO */
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    header img {
+        max-width: 75px;
+    }
+
+    /* BANNER */
+    .banner {
+        margin: 10px;
+        padding: 25px 18px;
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .banner h1 {
+        font-size: clamp(25px, 7vw, 36px);
+        overflow-wrap: break-word;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    /* PESQUISA */
+    .pesquisa {
+        width: calc(100% - 20px);
+        max-width: none;
+        height: 45px;
+        margin: 10px auto;
+    }
+
+    .pesquisa input {
+        min-width: 0;
+        font-size: 15px;
+        padding-left: 45px;
+    }
+
+    .pesquisa button {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    .icone-pesquisa {
+        left: 14px;
+        font-size: 17px;
+    }
+
+    /* CATEGORIAS */
+    .Categoria {
+        margin: 15px;
+        gap: 8px;
+    }
+
+    .grade-categorias {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .cartao-categoria {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 15px 5px;
+    }
+
+    /* GRADE DE RECEITAS */
+    .cards-receitas {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+        gap: 16px;
+        margin: 20px auto;
+    }
+
+    .recipe-card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 190px;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .recipe-meta {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* PÁGINA INDIVIDUAL DA RECEITA */
+    .pagina-receita {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        margin: 20px 0 40px;
+        gap: 15px;
+    }
+
+    .receita-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .informações-receita {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    /* RODAPÉ */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    .footer-titulo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer h1 {
+        font-size: 22px;
+        border-right: none;
+        border-bottom: 3px solid #B91C1C;
+        padding: 0 0 10px;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer-redes {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* IMAGENS E ELEMENTOS */
+    img {
+        max-width: 100%;
+    }
+
+    input, textarea, select, button {
+        max-width: 100%;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+@media screen and (max-width: 380px) {
+
+    .grade-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+    }
+
+    .pesquisa input {
+        font-size: 13px;
+        padding-left: 38px;
+    }
+
+    .pesquisa button {
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+}/* ==========================================
+   HEADER RESPONSIVO - CELULAR E TABLET
+========================================== */
+
+@media screen and (max-width: 1024px) {
+
+    /* ORGANIZAÇÃO GERAL DO CABEÇALHO */
+    header {
+        position: relative !important;
+
+        /* Mantém a logo e o título lado a lado */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        /* Centraliza os elementos */
+        justify-content: center !important;
+        align-items: center !important;
+
+        /* Distância entre a logo e o título */
+       gap: 10px !important;
+
+        /* Espaço inferior reservado para os botões */
+        padding: 12px 8px 60px !important;
+
+        /* Impede que o cabeçalho aumente de largura */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ======================================
+       LOGO
+    ====================================== */
+
+    header img {
+
+        /* Ajusta o tamanho da logo conforme a tela */
+        width: clamp(55px, 13vw, 80px) !important;
+
+        /* Mantém a proporção original */
+        height: auto;
+
+        /* Impede que a logo seja espremida */
+        flex-shrink: 0;
+    }
+
+    /* ======================================
+       TÍTULO - IFA NA MESA
+    ====================================== */
+
+    header h1 {
+
+        /* Aumenta a fonte conforme o tamanho da tela */
+        font-size: clamp(22px, 5vw, 34px) !important;
+
+        /* Mantém as linhas próximas */
+        line-height: 1.1;
+
+        /* Remove espaços desnecessários */
+        margin: 0;
+
+        /* Permite que o texto se ajuste */
+        min-width: 0;
+
+        /* Alinha o texto à esquerda */
+        text-align: left;
+
+        /* Evita que o título ultrapasse a tela */
+        overflow-wrap: break-word;
+    }
+
+    /* ======================================
+       BOTÕES SOBRE E REDES SOCIAIS
+    ====================================== */
+
+    header .link-sobre,
+    header .link-redes {
+
+        /* Posiciona os botões na parte inferior */
+        position: absolute !important;
+        top: auto !important;
+        bottom: 8px !important;
+
+        /* Remove o posicionamento antigo */
+        transform: none !important;
+
+        /* Mantém os textos centralizados */
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+
+        /* Aumenta um pouco o tamanho das letras */
+        font-size: clamp(16px, 2.5vw, 16px) !important;
+
+        /* Aumenta o espaço interno dos botões */
+        padding: 8px 13px !important;
+
+        /* Impede que o texto quebre */
+        white-space: nowrap !important;
+
+        /* Remove margens antigas */
+        margin: 0 !important;
+    }
+
+    /* ======================================
+       BOTÃO SOBRE
+    ====================================== */
+
+    header .link-sobre {
+
+        /* Posiciona o botão à esquerda */
+        left: calc(50% - 120px) !important;
+        right: auto !important;
+    }
+
+    /* ======================================
+       BOTÃO REDES SOCIAIS
+    ====================================== */
+
+    header .link-redes {
+
+        /* Posiciona o botão ao lado de Sobre */
+        left: calc(50% + 5px) !important;
+        right: auto !important;
+    }
+
+}
+/* =========================================
+   RESPONSIVIDADE DO CONTEÚDO SOBRE
+   TABLETS
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* Ajusta a largura do conteúdo */
+    .sobre-container {
+        width: 92%;
+        margin: 25px auto;
+        box-sizing: border-box;
+    }
+
+    /* Ajusta o banner */
+    .sobre-banner {
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .sobre-banner h1 {
+        font-size: clamp(25px, 4vw, 32px);
+    }
+
+    .sobre-banner p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Organiza os blocos em duas colunas */
+    .sobre-conteudo {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .sobre-bloco {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .sobre-bloco h2 {
+        font-size: 20px;
+    }
+
+    .sobre-bloco p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Botão de voltar */
+    .sobre-voltar {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .sobre-voltar a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE PARA CELULARES
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .sobre-container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    /* Banner */
+    .sobre-banner {
+        padding: 20px 12px;
+    }
+
+    .sobre-banner h1 {
+        font-size: 24px;
+    }
+
+    .sobre-banner p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Coloca os blocos um abaixo do outro */
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sobre-bloco {
+        padding: 18px 15px;
+    }
+
+    .sobre-bloco h2 {
+        font-size: 19px;
+    }
+
+    .sobre-bloco p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Ícones */
+    .sobre-icone {
+        font-size: 25px;
+    }
+
+    /* Botão voltar */
+    .sobre-voltar a {
+        font-size: 14px;
+        padding: 11px 15px;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .sobre-banner h1 {
+        font-size: 21px;
+    }
+
+    .sobre-bloco {
+        padding: 15px 12px;
+    }
+
+    .sobre-bloco h2 {
+        font-size: 18px;
+    }
+
+    .sobre-bloco p {
+        font-size: 13px;
+    }
+}
