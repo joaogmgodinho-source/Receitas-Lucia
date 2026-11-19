@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas - Lucia</title>
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <!-- Biblioteca de ícones Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+    <img src="img/logo-lucia.png" alt="logo lucia">
+
+    <h1><span>IFA na Mesa</span> - Lúcia Fernandes Lopes</h1>
+
+    <a href="sobre.html" class="link-sobre">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre
+    </a>
+
+     <!-- Botão Redes Sociais -->
+    <a href="#footer" class="link-redes">
+        <i class="fa-solid fa-share-nodes"></i>
+        Redes sociais
+    </a>
+</header>
+
+  <div class="banner">
+
+    <h1>Receitas do Lucia</h1>
+    <p>Receitas saudaveis usando comida sustenavel como casca de maçã, casca de banana entre outros. As receitas dada
+      pelos alunos de todo o ensino médio e catalogada aqui</p>
+        <!-- Barra de pesquisa -->
+<div class="pesquisa">
+    <!-- Ícone da lupa -->
+    <i class="fa-solid fa-magnifying-glass icone-pesquisa"></i>
+    <!-- Campo onde o usuário digita -->
+    <input type="text" id="campoPesquisa" placeholder="Pesquisar receitas...">
+
+  
+
+</div>
+  </div>
+  
+
+  <!-- imagem da categoria -->
+  <div class="Categoria">
+    <img src="img/categorias.png" alt="icone de categoria" width="24" height="24">
+    <h2>Categorias</h2>
+  </div>
+
+  <!-- Caixa que deixa os 4 quadrados alinhados lado a lado -->
+  <div class="grade-categorias">
+    <!-- Botão 1: Salgados -->
+    <button type="button" class="cartao-categoria" data-categoria="salgados">
+      <!-- Ícone de talheres -->
+      <img src="img/salgados.png" alt="icone de salgados" width="25" height="25">
+      <span>Salgados</span>
+    </button>
+
+    <!-- Botão 2: Doces -->
+    <button type="button" class="cartao-categoria" data-categoria="doces">
+      <!-- Ícone de bolo -->
+      <img src="img/doces.png" alt="icone de doces" width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Doces</span>
+    </button>
+
+    <!-- Botão 3: Bebidas -->
+    <button type="button" class="cartao-categoria" data-categoria="bebidas">
+      <!-- Ícone de copo -->
+      <img src="img/bebidas.png" alt="icone de bebidas" width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Bebidas</span>
+    </button>
+
+    <!-- Botão 4: Caldos -->
+    <button type="button" class="cartao-categoria" data-categoria="caldo">
+      <!-- Ícone de tigela quente -->
+      <img src="img/caldos.png" alt="icone de caldos" width="25" height="25">
+      <!-- Texto do botão -->
+      <span>Caldos</span>
+    </button>
+  </div>
+
+  <!-- icone e titulo das Receitas -->
+  <div class="receitas">
+    <!-- Ícone de receitas -->
+    <img src="img/receitas.png" alt="logo receitas" width="24" height="24">
+    <h2>Receitas</h2>
+  </div>
+
+<section class="cards-receitas">
+
+    <!-- 1. Lasanha -->
+    <div class="recipe-card" data-categoria="salgados">
+      <div class="card-image"><img src="img/lasanha.png" alt="Lasanha à Bolonhesa"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Lasanha à Bolonhesa</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 60 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 6 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=lasanha-bolonhesa" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 2. Bolo de Cenoura -->
+    <div class="recipe-card" data-categoria="doces">
+      <div class="card-image"><img src="img/bolo-de-cenoura.png" alt="Bolo de cenoura"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Bolo de cenoura</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 60 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 6 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=bolo-cenoura" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 3. Sopa de Feijão -->
+    <div class="recipe-card" data-categoria="caldo">
+      <div class="card-image"><img src="img/sopa-feijao.png" alt="Sopa de Feijão"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Sopa de Feijão</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 30 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 6 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=sopa-feijao" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 4. Café Cremoso -->
+    <div class="recipe-card" data-categoria="bebidas">
+      <div class="card-image"><img src="img/cafe-cremoso.png" alt="Café Cremoso"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Café Cremoso</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 15 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 6 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=cafe-cremoso" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 5. Brigadeiro de Casca de Banana -->
+    <div class="recipe-card" data-categoria="doces">
+      <div class="card-image"><img src="img/brigadeiro-banana.png" alt="Brigadeiro de Casca de Banana"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Brigadeiro de Casca de Banana</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 20 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 4 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=brigadeiro-banana" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 5. Brigadeiro de Casca de Banana -->
+    <div class="recipe-card" data-categoria="doces">
+      <div class="card-image"><img src="img/brigadeiro-banana.png" alt="Brigadeiro de Casca de Banana"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Brigadeiro de Casca de Banana</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 20 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 4 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=brigadeiro-banana" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 6. Chá de Casca de Maçã -->
+    <div class="recipe-card" data-categoria="bebidas">
+      <div class="card-image"><img src="img/cha- maca.png" alt="Chá de Casca de Maçã"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Chá de Casca de Maçã</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 10 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 3 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=cha-maca" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 7. Farofa de Casca de Legumes -->
+    <div class="recipe-card" data-categoria="salgados">
+      <div class="card-image"><img src="img/farofa-legumes.png" alt="Farofa de Casca de Legumes"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Farofa de Casca de Legumes</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 25 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 5 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=farofa-legumes" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 8. Bolo de Casca de Laranja -->
+    <div class="recipe-card" data-categoria="doces">
+      <div class="card-image"><img src="img/bolo-laranja.png" alt="Bolo de Casca de Laranja"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Bolo de Casca de Laranja</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 45 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 8 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=bolo-laranja" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 9. Suco Detox de Couve e Limão -->
+    <div class="recipe-card" data-categoria="bebidas">
+      <div class="card-image"><img src="img/suco-detox.png" alt="Suco Detox"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Suco Detox de Couve e Limão</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 5 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 2 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=suco-detox" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 10. Caldo Verde Sustentável -->
+    <div class="recipe-card" data-categoria="caldo">
+      <div class="card-image"><img src="img/caldo-verde.png" alt="Caldo Verde Sustentável"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Caldo Verde Sustentável</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 40 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 6 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=caldo-verde" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 11. Geleia de Casca de Melancia (NOVO) -->
+    <div class="recipe-card" data-categoria="doces">
+      <div class="card-image"><img src="img/geleia-melancia.png" alt="Geleia de Casca de Melancia"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Geleia de Casca de Melancia</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 35 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 10 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=geleia-melancia" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+    <!-- 12. Chips de Casca de Batata (NOVO) -->
+    <div class="recipe-card" data-categoria="salgados">
+      <div class="card-image"><img src="img/chips-batata.png" alt="Chips de Casca de Batata"></div>
+      <div class="card-content">
+        <h3 class="recipe-title">Chips de Casca de Batata</h3>
+        <div class="recipe-meta">
+          <span class="meta-item"><img src="img/relogio.png" width="18" height="18"> 20 min</span>
+          <span class="meta-item"><img src="img/garfo e faca.png" width="18" height="18"> 4 porções</span>
+        </div>
+        <div class="card-footer"><a href="receita.html?receita=chips-batata" class="btn-recipe">Ver Receita &rarr;</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <!-- título do footer que contem logo e descrição -->
+    <div class="footer-titulo">
+      <img src="img/logo-lucia.png" alt="logo lucia">
+      <h1>Lúcia Fernandes Lopes</h1>
+      <p>Receitas que fazem bem!</p>
+    </div>
+
+    <!-- Fiz essa div para poder mecher em todas as redes sociais no CSS -->
+    <div class="footer-content">
+      <!-- aqui fica todas as redes sociais -->
+      <div class="footer-redes">
+        <a href="https://www.instagram.com/eebluciaflopes?psln=enZlaGRidTRrdDNx" target="_blank">Instagram<img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="instagram" width="22"
+            height="22"></a>
+        <a href="https://www.facebook.com/share/1BW7znE5n3/" target="_blank">Facebook<img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="facebook" width="23.5"
+            height="23.5"></a>
+
+            
+             <!-- esta dentro DA DIV footer-redes para ficar na mesma posição das redes sociais -->
+     <!-- Localização  -->
+        <div class="botao-mapa">
+           <a href="https://www.google.com/maps/place/27%C2%B050'12.8%22S+50%C2%B020'39.7%22W/@-27.836893,-50.3469399,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-27.836893!4d-50.344365?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Localização<img
+            src="img/google-maps.png" alt="Localização" width="23.5"
+            height="23.5"></a>
+</div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
